@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFF8DC;" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+  <tabs>
+    <Tab text="Log In">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFF8DC;">
+               <children>
+                  <Button fx:id="ButtonLogInLogin" layoutX="563.0" layoutY="350.0" mnemonicParsing="false" onAction="#ButtonLogIn" text="Log In" />
+                  <PasswordField fx:id="PasswordFieldLogInPassword" alignment="CENTER" layoutX="500.0" layoutY="294.0" promptText="Enter Password..." />
+                  <TextField fx:id="TextFieldLogInUserName" alignment="CENTER" layoutX="500.0" layoutY="239.0" promptText="Enter User Name..." />
+                  <Label layoutX="500.0" layoutY="150.0" text="Log In">
+                     <font>
+                        <Font name="Consolas" size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="998.0" layoutY="622.0" text="Dont have an account?" />
+                  <Button fx:id="ButtonLogInTakeMeToSignUp" layoutX="990.0" layoutY="660.0" mnemonicParsing="false" onAction="#ButtonTakeMeToSignUp" text="Take me to Sign Up" AnchorPane.rightAnchor="51.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Sign Up">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="500.0" layoutY="150.0" text="Sign Up">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextFieldSignUpUserName" alignment="CENTER" layoutX="490.0" layoutY="276.0" promptText="Enter User Name..." />
+                  <TextField fx:id="TextFieldSignUpPassword" alignment="CENTER" layoutX="490.0" layoutY="350.0" promptText="Enter Password..." />
+                  <Button fx:id="ButtonSignUpSignUp" layoutX="547.0" layoutY="418.0" mnemonicParsing="false" onAction="#ButtonSignUp" text="Sign Up" />
+                  <Button layoutX="937.0" layoutY="662.0" mnemonicParsing="false" onAction="#ButtonTakeMeToCompanySignUp" text="Take me to company sign up" AnchorPane.rightAnchor="51.0" />
+                  <Label layoutX="960.0" layoutY="623.0" text="Using this as a company?" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Sign Up Virksomhed">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="409.0" layoutY="150.0" text="Company Sign Up">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TextfieldSignUpCompanyName" alignment="CENTER" layoutX="489.0" layoutY="274.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter Company Name..." />
+                  <TextField fx:id="TextfieldSignupCompanyPassword" alignment="CENTER" layoutX="490.0" layoutY="350.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter Company Password..." />
+                  <Button fx:id="ButtonSignUpVirksomhedSignUp" layoutX="554.0" layoutY="423.0" mnemonicParsing="false" onAction="#ButtonCompanySignUp" text="Sign Up" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Home Screen">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Transactions">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Untitled Tab">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="Untitled Tab">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
