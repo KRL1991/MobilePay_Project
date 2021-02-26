@@ -1,7 +1,6 @@
-package sample;
+package selector;
 
 import java.sql.*;
-import java.util.Scanner;
 
 public class Select {
 
@@ -11,7 +10,7 @@ public class Select {
      *
      * @return the Connection object
      */
-    private Connection connect() {
+    public Connection connect() {
 
         // SQLite connection string
         String url = "jdbc:sqlite:brugere.sqlite";
@@ -56,6 +55,31 @@ public class Select {
 
     public void selectOverførsler (){
 
+        String overFørsler = "SELECT * FROM main.Overførsler";
+
+
+        try (Connection conn = this.connect();
+             Statement stmt1 = conn.createStatement();
+             ResultSet rs1 = stmt1.executeQuery(overFørsler)) {
+
+            // loop through the result set
+            while (rs1.next()) {
+                System.out.println(rs1.getInt("ID") + ".\n" +
+                        rs1.getString("Til") + "\n" +
+                        rs1.getString("Fra") + "\n" +
+                        rs1.getString("Beløb") + "\n" +
+                        rs1.getString("Dato") + "\n" +"\n+\n"
+
+
+                );
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+
+
     }
 
 
@@ -65,6 +89,7 @@ public class Select {
     public static void main(String[] args) {
         Select app = new Select();
         app.selectAll();
+        app.selectOverførsler();
     }
 }
 
